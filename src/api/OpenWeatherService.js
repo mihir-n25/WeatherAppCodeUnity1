@@ -21,7 +21,7 @@ export async function fetchWeatherData(lat, lon) {
         `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
       ),
     ]);
-
+    
     const weatherResponse = await weatherPromise.json();
     const forcastResponse = await forcastPromise.json();
     return [weatherResponse, forcastResponse];
